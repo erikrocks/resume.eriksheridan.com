@@ -19,8 +19,15 @@ Erik is not an engineer. Handle setup for him and explain by consequence, not me
 - **The Skills section was removed on 4 Nov 2026** at Erik's request — the section, its
   nav link, and the `.skills-*` / `.pill` CSS all went. Don't reintroduce it unless he
   asks; the pill styling was only ever used there.
-- The headshot is a base64 `data:` URI (~92KB) embedded in the HTML, **byte-identical to the
-  copy in the hub repo**. Changing the photo means changing both files.
+- The headshot is `headshot.jpg`, a real 400x400 file in the repo root (it was an inlined
+  base64 blob until 4 Nov 2026 — extracting it took the page from 111KB to 20KB). The same
+  file exists in the hub repo; changing the photo means replacing it in both. **Don't
+  inline it again.**
+- `favicon.svg` and Open Graph / Twitter card tags were added 4 Nov 2026, same as the hub.
+  `og:url` and `og:image` must stay absolute URLs or previews break.
+- **`.fade-up` starts at `opacity: 0`.** The reduced-motion block therefore forces
+  `.fade-up { opacity: 1; animation: none; }` — disabling the animation without that leaves
+  the entire hero invisible for anyone with reduce-motion on. Don't simplify that rule.
 - Design: `DM Serif Display` + `DM Sans`, green `#3B6D11`, ground `#fafaf8`. Light only.
   The hub uses the same tokens on purpose — keep them in sync.
 
