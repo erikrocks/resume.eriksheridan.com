@@ -15,7 +15,10 @@ Erik is not an engineer. Handle setup for him and explain by consequence, not me
   became a project menu.
 - **The nav name in the top-left links back to `https://eriksheridan.com`** — that's the
   only way back to the hub. Don't remove it.
-- Sections: Nav, Hero, About, Experience, Skills, Education, Contact, Footer.
+- Sections: Nav, Hero, About, Experience, Education, Contact, Footer.
+- **The Skills section was removed on 4 Nov 2026** at Erik's request — the section, its
+  nav link, and the `.skills-*` / `.pill` CSS all went. Don't reintroduce it unless he
+  asks; the pill styling was only ever used there.
 - The headshot is a base64 `data:` URI (~92KB) embedded in the HTML, **byte-identical to the
   copy in the hub repo**. Changing the photo means changing both files.
 - Design: `DM Serif Display` + `DM Sans`, green `#3B6D11`, ground `#fafaf8`. Light only.
