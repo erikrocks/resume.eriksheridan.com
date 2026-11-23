@@ -38,3 +38,12 @@ Erik is not an engineer. Handle setup for him and explain by consequence, not me
 ```
 curl -sS -o /tmp/live.html "https://resume.eriksheridan.com/?cb=$RANDOM"; diff /tmp/live.html index.html
 ```
+
+## Analytics
+
+Cloudflare Web Analytics, added 22 Nov 2026 at Erik's request. It's cookie-free and has no consent banner. A one-line
+`static.cloudflareinsights.com/beacon.min.js` snippet sits just before `</body>`, and the site is set
+to "JS snippet installation" in Cloudflare (not automatic injection). eriksheridan.com and games.html
+share one site token; resume.eriksheridan.com has its own. Stats are in the Cloudflare dashboard →
+Web Analytics. **Never add it to bubble. or kudr.eriksheridan.com:** their privacy policies promise
+"no analytics or tracking tools", and the same files ship in the kids' apps.
